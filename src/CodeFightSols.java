@@ -6,8 +6,8 @@ public class CodeFightSols {
     }
 
     /**
-     * found This puzzle particularly satisfying, 
-     * @param n
+     * found This puzzle particularly satisfying,
+     * @param n looking for weakest number related to n
      * @return
      */
     public static int[] weakNumbers(int n) {
