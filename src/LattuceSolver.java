@@ -7,12 +7,12 @@ public class LattuceSolver {
         //System.out.println(factorial(1000));
         System.out.println(choose(4+7, 4));
         System.out.println(choose(2, 1));
-        System.out.println(choose(1000, 500).intValue());
+        System.out.println(latticevillePaths(1000, 1000));
     }
 
-    
+
     public static BigInteger choose(Integer n, Integer k) {
-        if (n - k < 1 || k <= 0) return new BigInteger("0");
+        if (n - k < 1 || k <= 0) return new BigInteger("1");
         BigInteger top = factorial(n);
         top = top.divide(factorial(k));
         top = top.divide(factorial(n - k));
@@ -39,11 +39,11 @@ public class LattuceSolver {
      * @param n
      * @return number of unique walks
      */
-    static public int latticevillePaths(int m, int n) {
+    static public BigInteger latticevillePaths(int m, int n) {
         int min = Math.min(m, n);
         int max = Math.max(m, n);
         if (min < 3) {
-            return 1;
+            return new BigInteger("1");
         }
         int temp = 3;
         int temp2 = 0;
@@ -56,9 +56,9 @@ public class LattuceSolver {
         BigInteger first = choose(max,min);
         first = first.multiply(choose(max - 1, min));
         first = first.divide(new BigInteger(((Integer) (min + 1)).toString()));
-        Integer x = 1000000007;
-        first = first.mod(new BigInteger(x.toString()));
-        return first.intValue();
+        //Integer x = 1000000007;
+        //first = first.mod(new BigInteger(x.toString()));
+        return first;
     }
     /**
      * Esther and Daniel are playing a video game called Latticeville.
@@ -102,6 +102,7 @@ public class LattuceSolver {
 
      [output] integer
 
-     The number of ways to send the two players from the southwest room to the northeast room such that the number of rooms visited is maximal, modulo 109 + 7.
+     The number of ways to send the two players from the southwest room to the northeast room
+     such that the number of rooms visited is maximal, modulo 109 + 7.
      */
 }
