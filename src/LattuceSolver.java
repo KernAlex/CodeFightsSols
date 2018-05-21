@@ -71,7 +71,7 @@ public class LattuceSolver {
      * But there seem to be many different ways to accomplish this. Given the size of a level in Latticeville,
      * determine how many different subsets of rooms Esther and Daniel can visit such that the number of rooms visited is maximal.
 
-     Since the answer may be quite large, return the result modulo 109 + 7.
+     Since the answer may be quite large, return the result modulo 10^9 + 7.
 
      Examples
 
@@ -91,14 +91,14 @@ public class LattuceSolver {
      The number of rows in the Latticeville level.
 
      Guaranteed constraints:
-     1 ≤ m ≤ 103
+     1 ≤ m ≤ 10^3
 
      [input] integer n
 
      The number of columns in the Latticeville level.
 
      Guaranteed constraints:
-     1 ≤ n ≤ 103
+     1 ≤ n ≤ 10^3
 
      [output] integer
 
