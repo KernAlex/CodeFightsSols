@@ -4,7 +4,7 @@ public class LattuceSolver {
 
     public static void main(String[] args) {
         BigInteger x = new BigInteger("10");
-        //System.out.println(factorial(1000));
+        System.out.println(factorial(1000));
         System.out.println(choose(4+7, 4));
         System.out.println(choose(2, 1));
         System.out.println(latticevillePaths(1000, 1000));
