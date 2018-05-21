@@ -9,6 +9,8 @@ public class LattuceSolver {
         System.out.println(choose(2, 1));
         System.out.println(choose(1000, 500).intValue());
     }
+
+    
     public static BigInteger choose(Integer n, Integer k) {
         if (n - k < 1 || k <= 0) return new BigInteger("0");
         BigInteger top = factorial(n);
@@ -16,6 +18,8 @@ public class LattuceSolver {
         top = top.divide(factorial(n - k));
         return top;
     }
+
+
     public static BigInteger factorial(Integer n) {
         if (n <= 1) return new BigInteger("1");
         BigInteger temp = new BigInteger(n.toString());
@@ -26,6 +30,15 @@ public class LattuceSolver {
 
         return  temp;
     }
+
+    /**
+     *  used @https://en.wikipedia.org/wiki/Narayana_number concepts to solve,
+     *  found a paper and used the formula, along with some arithmetic to figure
+     *  it out.
+     * @param m
+     * @param n
+     * @return number of unique walks
+     */
     static public int latticevillePaths(int m, int n) {
         int min = Math.min(m, n);
         int max = Math.max(m, n);
